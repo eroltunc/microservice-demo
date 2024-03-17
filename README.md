@@ -22,7 +22,7 @@ This application is developed with microservice architecture. It aims to simulat
 
 >Communication between services is provided by EventBus.
 
-IMAGE
+![Application Solution](MicroserviceOnlineShopping/SolitionItems/img/1.png)
 
 
 This text you see here is *actually- written in Markdown! To get a feel
