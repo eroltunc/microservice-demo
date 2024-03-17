@@ -5,14 +5,12 @@ using EventBus.UnitTest.Events.EventHandlers;
 using EventBus.UnitTest.Events.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using RabbitMQ.Client;
 
 namespace EventBus.UnitTest
 {
     public class EventBusTests
     {
         private  ServiceCollection services;
-
         public EventBusTests()
         {
             this.services = new ServiceCollection();
@@ -28,7 +26,7 @@ namespace EventBus.UnitTest
             var sp = services.BuildServiceProvider();
             var eventBus=sp.GetRequiredService<IEventBus>();
             eventBus.Subscribe<OrderCreatedIntegrationEvent, OrderCreatedIntegrationEventHandler>();
-         //   eventBus.UnSubscribe<OrderCreatedIntegrationEvent, OrderCreatedIntegrationEventHandler>();
+         // eventBus.UnSubscribe<OrderCreatedIntegrationEvent, OrderCreatedIntegrationEventHandler>();
         }
         [Fact]
         public void send_message_to_rabbitmq()
@@ -51,13 +49,13 @@ namespace EventBus.UnitTest
                 DefaultTopicName = "ManagementBoardTopicName",
                 EventBusType = EventBusType.RabbitMQ,
                 EventNameSuffix = "IntegrationEvent",
-                Connection = new ConnectionFactory()
-                {
-                    HostName = "localhost",
-                    Port = 5672,
-                    UserName = "guest",
-                    Password = "guest"
-                }
+                //Connection = new ConnectionFactory()
+                //{
+                //    HostName = "localhost",
+                //    Port = 5672,
+                //    UserName = "guest",
+                //    Password = "guest"
+                //}
             };
         }
     }

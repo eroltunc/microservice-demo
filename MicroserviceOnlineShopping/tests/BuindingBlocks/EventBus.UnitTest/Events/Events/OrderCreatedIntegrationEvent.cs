@@ -10,7 +10,6 @@ namespace EventBus.UnitTest.Events.Events
     public class OrderCreatedIntegrationEvent:IntegrationEvent
     {
         public int Id { get; set; }
-
         public OrderCreatedIntegrationEvent(int ıd)
         {
             Id = ıd;
