@@ -22,12 +22,6 @@ This application is developed with microservice architecture. It aims to simulat
 
 >Communication between services is provided by EventBus.
 
-![Application Solution](MicroserviceOnlineShopping/SolitionItems/img/1.png)
-
-
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
 
 ## Tech
 
@@ -43,7 +37,7 @@ This application uses a lot of technology.
 
 ## Project Solution
 
-IMAGE
+![Application Solution](MicroserviceOnlineShopping/SolitionItems/img/1.png)
 
 ## Installation
 
@@ -55,9 +49,13 @@ docker run -d -p 6379:6379 -p 8001:8001 --name myredis-stack --hostname my-redis
 docker run -d -p 8500:8500 -p 8600:8600 --name myconsul --hostname my-consul hashicorp/consul:latest
 docker run -d -p 5672:5672 -p 15672:15672 --name myrabbit --hostname my-rabbit  -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
 ```
+
+![Docker](MicroserviceOnlineShopping/SolitionItems/img/3.png)
+
 ## Event Bus Test
 We can use unit test to test the EventBus.
-IMAGE
+![EventBus Unit Test](MicroserviceOnlineShopping/SolitionItems/img/4.png)
+![EventBus Solution](MicroserviceOnlineShopping/SolitionItems/img/2.png)
 
 
 
